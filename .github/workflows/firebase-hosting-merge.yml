@@ -16,8 +16,8 @@ jobs:
           cache: true
           channel: "stable"
       - run: flutter pub get
-      - run: flutter build web
       - run: echo -n ${{ secrets.FIREBASE_API_KEY }} | base64 -d > lib/secret.dart
+      - run: flutter build web
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
