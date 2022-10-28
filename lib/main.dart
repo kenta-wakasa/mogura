@@ -25,8 +25,8 @@ Future<String> _buildDynamicUrl(
         },
         "link": "https://mogura-tataki.web.app/",
         "socialMetaTagInfo": {
-          "socialTitle": '光ったところを叩け',
-          "socialDescription": 'わたしのスコアは $score 回でした。あなたはどうする？',
+          "socialTitle": 'わたしのスコアは $score 回でした。あなたはどうする？',
+          "socialDescription": '光ったところ叩くシンプルなもぐらたたきゲーム。反射神経を発揮して霊長類最強を目指そう。',
           "socialImageLink": imageUrl.toString(),
         }
       }
@@ -164,7 +164,7 @@ class _MoguraPageState extends State<MoguraPage> {
             if (url.isNotEmpty)
               InkWell(
                 onTap: () async {
-                  await Clipboard.setData(ClipboardData(text: url));
+                  await Clipboard.setData(ClipboardData(text: '#モグラス $url'));
                   if (!mounted) {
                     return;
                   }
