@@ -69,7 +69,7 @@ class MoguraPage extends StatefulWidget {
 class _MoguraPageState extends State<MoguraPage> {
   static const playTime = 10;
   static const sideLength = 5;
-  static const cellLength = 80.0;
+  static const cellLength = 64.0;
 
   int count = 0;
 
@@ -123,11 +123,9 @@ class _MoguraPageState extends State<MoguraPage> {
       ),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            const SizedBox(
-              height: 40,
-            ),
+            const SizedBox(height: 40),
             for (var y = 0; y < sideLength; y++)
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
